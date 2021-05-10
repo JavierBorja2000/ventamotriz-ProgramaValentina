@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior : smooth;
+}
+
+body{
+    font-family: 'Maven Pro', sans-serif;
+    background-color: #181818;
+    color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+    color:#ffffff
+}
+
+.contenedor {
+    min-width: 1024px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 20px 25px;
+    z-index: 1;
+    transition: 1s;
+}
+
+.header.sticky {
+    background-color: #181818;
+    opacity: .95;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 1.5px; */
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+.logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo p{
+    margin-left: 5px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.7rem;
+}
+
+.navigation li {
+    margin-left: 15px;
+    padding: .5rem;
+}
+
+/* .navigation li:hover {
+    border-bottom: 2px solid #ffffff;
+} */
+
+.navigation a{
+    display: inline-block;
+    padding: 5px;
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.navigation a::after {
+    content: '';
+    display: block;
+    margin-top: 1px;
+    width: 0px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width .3s;
+}
+
+.navigation a:hover::after {
+   width: 100%;
+   transition: width .3s;
+}
+
+.hero {
+    /* margin-top: -70px; */
+    margin-left: -90px;
+    background: url(./assets/principal_large.jpg);
+    background-size: 100%;
+    background-position:left;
+    opacity: .6;
+    height: 100vh;
+}
+
+
+.categorias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 60vh;
+    opacity: .7;
+    transition: 1s 0s;
+}
+
+
+.cards.carros {
+    background-image: url(./assets/car.jpg);
+}
+
+.cards.camionetas {
+    background-image: url(./assets/truck.jpg);
+}
+
+.cards.motos {
+    background-image: url(./assets/biker.jpg);
+}
+
+.cards {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-variant: all-small-caps;
+}
+
+
+.cards .seleccionado {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #181818;
+    transition: display 1s;
+}
+
+.cards:hover .seleccionado {
+    display: block;
+    transition: display 1s;
+    opacity: .5;
+}
+
+.cards p {
+    position: absolute;
+    bottom: 0;
+    font-size: 5rem;
+    font-weight: 400;
+    padding: 30px;
+    letter-spacing: 1.5px;
+}
+
+.cards:hover p {
+    font-weight: 500;
+}
+
+
+.vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: auto;
+}
+
+.vision_conocenos {
+    /* border: 1px solid red; */
+    padding-left: 40px;
+}
+
+.vision_conocenos p {
+    font-size: 5rem;
+    margin-top: 190px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.vision_conocenos .btn-conocenos {
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 5px;
+    padding: 20px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color:#ffffff;
+    font: 1.7rem 'Maven Pro', sans-serif;
+    letter-spacing: 1px;
+    transition: .6s;
+}
+
+.vision_conocenos .btn-conocenos:hover {
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+}
+.vision_imagen {
+    display: grid;
+    place-items: center;
+    /* border: 1px solid red; */
+}
+
+.vision_imagen img {
+    height: 90%;
+    border-radius: 10px;
+    opacity: .55;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 50px;
+}
+
+.redes svg{
+    margin-left: 10px;
+    opacity: .5;
+}
+
+.redes svg:hover{
+    opacity: .2;
+}
